@@ -1,0 +1,448 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #091627;
+    color: #000000; 
+}
+
+header {
+    background-color: #0d1b2a;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 150px;
+    margin-left: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #1f2937;
+}
+
+.hero-section {
+    background: url('Imagenes/fondo.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: backgroundScroll 20s linear infinite;
+}
+
+.hero-section h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-section p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    max-width: 700px;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Estilos generales para los botones */
+.btn {
+    padding: 12px 30px; /* Ajusta el tamaño de los botones */
+    font-size: 1.1rem; /* Un tamaño de fuente agradable */
+    text-transform: uppercase; /* Hace que el texto esté en mayúsculas */
+    font-weight: bold;
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Elimina el subrayado */
+    display: inline-block;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave para el hover */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos para el botón primario */
+.primary-btn {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Color del texto blanco */
+    border: 2px solid #007bff; /* Borde del mismo color que el fondo */
+}
+
+.primary-btn:hover {
+    background-color: #0056b3; /* Fondo más oscuro cuando se pasa el mouse */
+    border-color: #0056b3; /* Borde más oscuro en hover */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón en hover */
+}
+
+/* Estilos para el botón secundario */
+.secondary-btn {
+    background-color: #1f2937; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    border: 2px solid #1f2937; /* Borde del mismo color que el fondo */
+}
+
+.secondary-btn:hover {
+    background-color: #374151; /* Fondo más claro cuando se pasa el mouse */
+    border-color: #374151; /* Borde más claro en hover */
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Estilos específicos para el botón de Discord */
+.secondary-btn.discord-btn {
+    background-color: #7289da; /* Fondo azul de Discord */
+    color: #fff;
+    border: 2px solid #7289da; /* Borde del mismo color que el fondo de Discord */
+}
+
+.secondary-btn.discord-btn:hover {
+    background-color: #5e73b5; /* Fondo más oscuro de Discord en hover */
+    border-color: #5e73b5; /* Borde más oscuro en hover */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 30%;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    margin: 20px 0;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.service-btn1,.service-btn2,.service-btn3 {
+    margin-top: 15px;
+    display: block;
+    background-color: #0d1b2a;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.about-section, .contact-section {
+    text-align: center;
+    background: url('Imagenes/Edificios Ciudad de noche_xtrafondos.com.jpg') no-repeat center center/cover;
+    
+}
+
+.about-section img {
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #0d1b2a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+
+.modal, .modal2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s .5s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .5s;
+    --transform: translateY(0);
+    --transition: transform .9s .9s;
+}
+
+.modal__container, .modal__container2 {
+    
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition:var(--transition);
+}
+
+.modal__title{
+    font-size: 2.5rem;
+}
+
+.modal__paragraph{
+    margin-bottom: 10px;
+}
+
+.modal__img{
+    width: 90%;
+    max-width: 300px;
+}
+
+.modal__close, .modal__close2{
+    text-decoration: none;
+    color: #fff;
+    background-color: #F26250;
+    padding: 1em 3em;
+    border: 1px solid ;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+.modal__close:hover, .modal__close2:hover{
+    color: #F26250;
+    background-color: #fff;
+}
+
+
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de desplazamiento del fondo */
+@keyframes backgroundScroll {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Estilo para la sección de servicios */
+#services {
+    padding: 100px 20px;
+    text-align: center;
+    background: rgb(17 26 37 / 64%);
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo para que combine con el fondo anterior */
+#services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Imagenes/fondo2.jpg') no-repeat center center/cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Estilo para el título */
+#services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #dfd3d3;
+}
+
+/* General styling for the About Us section */
+#about-us {
+    margin: 0 auto;
+    background: url('Imagenes/vi-league-of-legends_5120x2880_xtrafondos.com.jpg') no-repeat center center/cover;
+    color: #333;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#about-us .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#about-us h2 {
+    font-size: 2.5em;
+    color: #641d1d;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #e7dede;
+    margin-bottom: 20px;
+}
+
+.principles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.principle {
+    flex: 1 1 30%;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.principle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.principle h3 {
+    font-size: 1.5em;
+    color: #741c11;
+    margin-bottom: 10px;
+}
+
+.principle p {
+    font-size: 1em;
+    color: #666;
+}
+
+#about-us strong {
+    color: #007bff;
+}
+
+@media (max-width:800px) {
+
+    .modal__container, .modal__container2{
+        padding: 2em 1.5em;
+    }
+
+    .modal__title{
+        font-size: 2rem;
+    }
+}
+
+#video {
+    width: 80%; /* El video ocupará el 80% del ancho de la página */
+    max-width: 800px; /* Limita el tamaño máximo a 800px */
+    margin: 20px auto; /* Centra el contenedor y agrega un margen en la parte superior e inferior */
+}
+
+iframe {
+    width: 60%; /* El video ocupará el 100% del ancho de su contenedor */
+    height: 270px; /* Define la altura del video */
+    border: none; /* Elimina el borde alrededor del iframe */
+}
